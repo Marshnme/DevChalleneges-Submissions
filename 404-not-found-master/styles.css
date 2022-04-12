@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('./fonts/SpaceMono-Regular.ttf');
+  }
+
 *{
     margin:0;
     padding:0;
@@ -10,11 +15,6 @@ body{
     width:90vw;
     height:100vh;
 }
-
-@font-face {
-    font-family: 'SpaceMono';
-    src: url('./fonts/SpaceMono-Regular.ttf');
-  }
 
 .container{
     display:grid;
@@ -73,3 +73,28 @@ footer{
     /* align-self: flex-end; */
     color:#BDBDBD;
 }
+
+
+@media (min-width: 1020px) {
+    .container{
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: repeat(2,1fr) ;
+    }
+    .ScareCrowImg{
+        align-self: center;
+        grid-column: 1/span 1;
+    }
+    .ScareCrowImg img{
+        width: 400px;
+    }
+    main{
+        align-self: center;
+        grid-column:2/span 1 ;
+    }
+    main .MainInfo{
+        width:400px;
+    }
+    footer{
+        grid-column: 1/span 2;
+    }
+  }
